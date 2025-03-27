@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+  <img src="{{ url_for('static', filename='images/extracted_logo.png') }}" alt="Symposium Logo" class="logo">
+  <h1>TNEA 2024 Symposium</h1>
+  <p>Welcome to the TNEA 2024 Symposium website!</p>
+  <div id="countdown"></div>
+</div>
+
+<script>
+// Countdown timer
+const eventDate = new Date("{{ event_date.strftime('%Y-%m-%dT%H:%M:%S') }}").getTime();
+const countdownEl = document.getElementById('countdown');
+const x = setInterval(function() {
+    const now = new Date().getTime();
+    const distance = eventDate - now;
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24))/(1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60))/(1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60))/1000);
+    countdownEl.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+    if (distance < 0) {
+        clearInterval(x);
+        countdownEl.innerHTML = "The event has started!";
+    }
+}, 1000);
+</script>
+{% endblock %}
