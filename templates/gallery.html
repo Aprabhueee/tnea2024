@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Gallery</h2>
+<div class="gallery">
+    <!-- Replace sample images with actual event images -->
+    <img src="{{ url_for('static', filename='images/sample1.jpg') }}" alt="Sample 1">
+    <img src="{{ url_for('static', filename='images/sample2.jpg') }}" alt="Sample 2">
+</div>
+{% endblock %}
