@@ -1,0 +1,46 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header nav {
+  background: #f8f8f8;
+  padding: 10px;
+  text-align: center;
+}
+
+header nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
+}
+
+.container {
+  text-align: center;
+  padding: 50px;
+}
+
+.logo {
+  max-width: 200px;
+}
+
+.flashes {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  color: red;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #f8f8f8;
+}
+
+.gallery img {
+  max-width: 300px;
+  margin: 10px;
+}
